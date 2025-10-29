@@ -5,8 +5,7 @@
 const CELSIUS_ABSOLUTE_ZERO: f64 = -273.15;
 const FAHRENHEIT_ABSOLUTE_ZERO: f64 = -459.67;
 
-// When I wrote this I didn't know the std::f64::MAX was THAT big of a number. I didn't really need to add the check to see if the value is valid or not.
-// But hey, practice is practice.
+// didnt know the max value was so large
 const CELSIUS_MAX_F64: f64 = (5.0/9.0) * (std::f64::MAX - 32.0); /* For large postive numbers, Celsius converted to Fahrenheit yields a greater number. 
                                                                     This could go above the max floating point value after the conversion. 
                                                                     Therefore we set a lower max for Celsius,if converted to Fahrenheit equals std::f64::MAX and not higher.
@@ -104,6 +103,3 @@ fn celsius_to_fahrenheit() {
 
     println!("Your value in Fahrenheit is: {fahrenheit} °F");
 }
-
-/* Wrote this program when I finished reading the third chapter of the Rust Programming Language, 
-which suggested to write a Fahrenheit - Celsius conversion program to practice. I also searched up extra things I didn't know. */ 
