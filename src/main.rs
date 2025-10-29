@@ -8,7 +8,7 @@ const FAHRENHEIT_ABSOLUTE_ZERO: f64 = -459.67;
 // didnt know the max value was so large
 const CELSIUS_MAX_F64: f64 = (5.0/9.0) * (std::f64::MAX - 32.0); /* For large postive numbers, Celsius converted to Fahrenheit yields a greater number. 
                                                                     This could go above the max floating point value after the conversion. 
-                                                                    Therefore we set a lower max for Celsius,if converted to Fahrenheit equals std::f64::MAX and not higher.
+                                                                    Therefore we set a lower max for Celsius, if converted to Fahrenheit equals std::f64::MAX and not higher.
                                                                 */
 const FAHRENHEIT_MAX_F64: f64 = std::f64::MAX;
 
